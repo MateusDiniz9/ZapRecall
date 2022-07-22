@@ -1,6 +1,9 @@
 import FirstScreen from "./FirstScreen";
 import Game from "./Game";
 import react from "react";
+import "../css/reset.css";
+import "../css/style.css";
+
 export default function App() {
   const [screen1, setScreen1] = react.useState("first-screen");
   const [screen2, setScreen2] = react.useState("game-screen hidden");
