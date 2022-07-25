@@ -1,5 +1,6 @@
 import react from "react";
 import Questions from "./Questions";
+import Bottom from "./Bottom";
 import logopequena from "../img/logo-pequeno.png";
 import wrong from "../img/errado.png";
 
@@ -88,24 +89,17 @@ export default function Game({ screen2 }) {
         finishGame={finishGame}
         gameState3={gameState3}
       />
-      <div className={gameState1}>
-        <h4>{text}</h4>
-        <h4>
-          {results.length}/{DeckToPlay.length} CONCLUÍDOS
-        </h4>
-        <div className="results">{finalResult}</div>
-      </div>
-      <div className={gameState2}>
-        <h4>
-          <img src={imgFinal} alt="imagem" />
-          {text1}
-        </h4>
-        <h4>{text2}</h4>
-        <h4>
-          {results.length}/{DeckToPlay.length} CONCLUÍDOS
-        </h4>
-        <div className="results">{finalResult}</div>
-      </div>
+      <Bottom
+        gameState1={gameState1}
+        gameState2={gameState2}
+        text={text}
+        results={results}
+        DeckToPlay={DeckToPlay}
+        finalResult={finalResult}
+        imgFinal={imgFinal}
+        text1={text1}
+        text2={text2}
+      />
     </div>
   );
 }

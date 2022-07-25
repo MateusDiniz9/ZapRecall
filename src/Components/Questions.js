@@ -12,7 +12,6 @@ function Question({
   results,
   setResults,
   finishGame,
-  DeckToPlay,
 }) {
   const [box1, setBox1] = react.useState("question");
   const [box2, setBox2] = react.useState("question-box hidden");
